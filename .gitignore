@@ -1,0 +1,58 @@
+# === GLOBAL ===
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+*.bak
+*.swp
+*.swo
+*.pid
+.cache/
+.vscode/
+.idea/
+*.code-workspace
+
+# === BACKEND (Django) ===
+backend/__pycache__/
+backend/**/*.py[cod]
+backend/**/*.pyo
+backend/**/*.pyd
+backend/*.sqlite3
+backend/db.sqlite3
+backend/media/
+backend/staticfiles/
+backend/.env
+backend/.env.*
+backend/instance/
+backend/**/migrations/
+!backend/**/migrations/__init__.py
+backend/venv/
+backend/env/
+backend/.venv/
+backend/.coverage
+backend/htmlcov/
+backend/.pytest_cache/
+backend/coverage.xml
+backend/.mypy_cache/
+backend/local_settings.py
+backend/settings_local.py
+
+# === FRONTEND (React) ===
+frontend/node_modules/
+frontend/build/
+frontend/dist/
+frontend/.env
+frontend/.env.*
+frontend/.next/
+frontend/.vite/
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+frontend/.parcel-cache/
+frontend/package-lock.json
+frontend/yarn.lock
+frontend/.turbo/
+
+# Optional: Ignore lock files only if you're solo
+# frontend/package-lock.json
+# frontend/yarn.lock
