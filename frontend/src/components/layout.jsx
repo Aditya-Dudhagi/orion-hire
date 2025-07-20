@@ -7,7 +7,9 @@ export default function Layout() {
             <div className="w-screen fixed">
                 <Navbar />
             </div>
-            <Outlet />
+            <div className="pt-24">
+                <Outlet />
+            </div>
         </main>
     )
 }
