@@ -13,8 +13,8 @@ createRoot(document.getElementById('root')).render(
             <Route element={<Layout />}>
                 <Route path="/" element={<App />} />
                 <Route path="/login" element={<Login />} />
-                <Route path="/Dashboard" element={<Dashboard />} />
-                <Route path='/FileInput' element={<Upload />} />
+                <Route path="/dashboard" element={<Dashboard />} />
+                <Route path='/fileinput' element={<Upload />} />
             </Route>
 
         </Routes>
