@@ -1,6 +1,7 @@
 # === GLOBAL ===
 .DS_Store
 Thumbs.db
+.env
 *.log
 *.tmp
 *.bak
