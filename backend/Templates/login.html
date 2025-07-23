@@ -1,0 +1,102 @@
+{% load socialaccount %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login to OrionHire</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f4f4f4;
+            margin: 0;
+        }
+
+        .login-container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        .social-login-buttons {
+            margin-top: 20px;
+        }
+
+        .social-login-buttons a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #fff;
+            color: #333;
+            font-size: 16px;
+            text-decoration: none;
+            cursor: pointer;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+            margin-bottom: 10px;
+            /* Space out buttons */
+        }
+
+        .social-login-buttons a:hover {
+            background-color: #f0f0f0;
+        }
+
+        .social-login-buttons img {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="login-container">
+        <h1>Welcome to OrionHire</h1>
+        <p>Login or Sign Up:</p>
+
+        <div class="social-login-buttons">
+            <a href="{% provider_login_url 'google' %}" class="google-login-button">
+                <img src="https://www.google.com/images/branding/googleg/1x/googleg_standard_color_64dp.png"
+                    alt="Google icon">
+                Sign in with Google
+            </a>
+
+            <p id="status-message" style="margin-top: 20px; color: green;"></p>
+            <p id="error-message" style="margin-top: 20px; color: red;"></p>
+        </div>
+    </div>
+
+
+    <script>
+        // Check if there is a status message in the URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const statusMessage = urlParams.get('status');
+        const errorMessage = urlParams.get('error');
+
+        if (statusMessage) {
+            document.getElementById('status-message').textContent = statusMessage;
+        }
+
+        if (errorMessage) {
+            document.getElementById('error-message').textContent = errorMessage;
+        }
+    </script>
+</body>
+
+</html>
