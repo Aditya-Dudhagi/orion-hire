@@ -58,7 +58,6 @@ librosa==0.11.0
 llvmlite==0.44.0
 MarkupSafe==3.0.2
 matplotlib==3.10.1
-mediapipe==0.10.21
 ml_dtypes==0.5.1
 mpmath==1.3.0
 msgpack==1.1.0
