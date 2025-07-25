@@ -111,3 +111,4 @@ urllib3
 virtualenv
 Werkzeug
 zipp
+gunicorn
